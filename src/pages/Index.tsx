@@ -5,6 +5,8 @@ import SkillsSection from "@/components/SkillsSection";
 import WorkSection from "@/components/WorkSection";
 import ContactSection from "@/components/ContactSection";
 import sanjibPhoto from "@/assets/sanjib-photo.png";
+import React from "react";
+import Projects from "@/components/Projects";
 
 const Index = () => {
   return (
@@ -25,6 +27,7 @@ const Index = () => {
         <AboutSection />
         <SkillsSection />
         <WorkSection />
+        <Projects />
         <ContactSection />
       </div>
     </div>

@@ -14,6 +14,9 @@ export default {
       },
     },
     extend: {
+      fontSize: {
+      '20xl': '20rem',
+      '12xl': '12rem',},
       fontFamily: {
         display: ["var(--font-display)", "sans-serif"],
         body: ["var(--font-body)", "sans-serif"],

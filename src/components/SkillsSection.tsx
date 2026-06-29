@@ -1,4 +1,8 @@
+import React from "react";
 import { motion } from "framer-motion";
+import developerIcon from "@/assets/developer.svg";
+import designerIcon from "@/assets/designer.svg";
+import videoIcon from "@/assets/editor.svg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -10,9 +14,21 @@ const fadeUp = {
 };
 
 const skills = [
-  { category: "Development", items: ["Java", "C++", "C", "MySQL"], icon: "⚡" },
-  { category: "Design", items: ["Photoshop", "UI/UX", "Brand Identity", "Typography"], icon: "✦" },
-  { category: "Video", items: ["CapCut", "Motion Graphics", "Color Grading", "Editing"], icon: "▶" },
+  { 
+    category: "Development", 
+    items: ["Java", "C++", "C", "MySQL", "PostgreSQL", "Vector DB", "Git", "GitHub"], 
+    icon: developerIcon
+  },
+  { 
+    category: "Design", 
+    items: ["Photoshop", "UI/UX", "Brand Identity", "Typography"], 
+    icon: designerIcon
+  },
+  { 
+    category: "Video", 
+    items: ["CapCut", "Motion Graphics", "Color Grading", "Editing","Visual Storytelling"], 
+    icon: videoIcon
+  },
 ];
 
 const SkillsSection = () => {
@@ -36,7 +52,7 @@ const SkillsSection = () => {
           Skills & <span className="text-gradient">Expertise</span>
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {skills.map((skill, i) => (
             <motion.div
               key={skill.category}
@@ -45,18 +61,30 @@ const SkillsSection = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeUp}
-              className="group p-8 rounded-2xl glass hover:glass-strong transition-all duration-500 hover:glow"
+              // Added 'overflow-hidden' to ensure the icon doesn't bleed out
+              className={`group relative flex flex-col rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 bg-[var(--glass-bg)] border border-[var(--glass-border)] hover:border-[var(--glass-highlight)] backdrop-blur-md shadow-lg overflow-hidden ${
+                i === 0 ? "md:col-span-2" : "col-span-1"
+              }`}
             >
-              <span className="text-3xl mb-6 block">{skill.icon}</span>
-              <h3 className="font-display text-xl font-semibold mb-4">{skill.category}</h3>
-              <ul className="space-y-2">
+            
+             <div className="absolute -bottom-6 -right-6 w-52 h-52 text-[hsl(var(--primary))] opacity-10 pointer-events-none">
+              <img src={skill.icon} alt={skill.category} className="w-full h-full" />
+             </div>
+              
+              <h3 className="text-2xl font-bold mb-6 text-[var(--foreground)] font-[var(--font-display)] relative z-10">
+                {skill.category}
+              </h3>
+              
+              <div className="flex flex-wrap gap-3 mt-auto relative z-10">
                 {skill.items.map((item) => (
-                  <li key={item} className="text-muted-foreground text-sm flex items-center gap-2">
-                    <span className="w-1 h-1 rounded-full bg-primary" />
+                  <span
+                    key={item}
+                    className="text-sm px-4 py-2 rounded-full bg-[var(--glass-highlight)] border border-[var(--glass-border)] text-[var(--secondary-foreground)] font-[var(--font-body)] transition-colors hover:bg-[hsl(var(--primary)/0.1)] hover:text-[hsl(var(--primary))]"
+                  >
                     {item}
-                  </li>
+                  </span>
                 ))}
-              </ul>
+              </div>
             </motion.div>
           ))}
         </div>

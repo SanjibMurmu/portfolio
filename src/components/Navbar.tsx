@@ -14,7 +14,7 @@ const Navbar = () => {
     >
       <span className="font-display text-xl font-bold text-gradient">Portfolio</span>
       <div className="flex gap-8 text-sm font-medium text-muted-foreground">
-        {["about", "skills", "work", "contact"].map((item) => (
+        {["about", "skills", "work","projects", "contact"].map((item) => (
           <button
             key={item}
             onClick={() => scrollTo(item)}

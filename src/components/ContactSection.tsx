@@ -30,11 +30,11 @@ const ContactSection = () => {
 
       {/* Footer */}
       <div className="max-w-5xl mx-auto mt-32 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-        <p>© 2026 — All rights reserved</p>
+        <p>© 2026 — Sanjib Murmu. All rights reserved</p>
         <div className="flex gap-6">
           <a className="hover:text-foreground transition-colors" href="https://github.com/SanjibMurmu">GitHub</a>
           <a className="hover:text-foreground transition-colors" href="https://www.linkedin.com/in/sanjibmurmu/">LinkedIn</a>
-          <a href="#" className="hover:text-foreground transition-colors">Twitter</a>
+          <a href="https://leetcode.com/u/Sanjib_Murmu/" className="hover:text-foreground transition-colors">LeetCode</a>
         </div>
       </div>
     </section>);
