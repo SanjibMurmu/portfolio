@@ -1,5 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import marksSS from "@/assets/marks.png";
+import synchronicityImg from "@/assets/acm.png";
+import BrowserMockup from "./BrowserMockup";
+import ImageCard from "./ImageCard";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -14,26 +18,39 @@ const fadeUp = {
 const projectsData = [
   {
     id: 1,
-    title: "Sanskriti Cultural Fest",
-    category: "Event Organization",
-    description: "Organized and scheduled the annual cultural fest for the Faculty of Engineering and Technology Students Union, including coordinating adjustments for sessional classes.",
-    tags: ["Leadership", "Event Management", "Coordination"],
-    link: "#",
+    title: "University Marks Manager",
+    category: "Full Stack",
+    description: "A role-based university marks management system built using Spring Boot, React and MySQL, featuring secure authentication, dynamic dashboards, and comprehensive CRUD operations for students, teachers, and administrators.",
+    tags: ["React", "Spring Boot", "MySQL", "Full Stack Development"],
+    image: marksSS,
+    BrowserMockup : true,
+    liveUrl : "https://university-marks-manager.netlify.app/",
+    link: "https://github.com/SanjibMurmu/university-marks-manager",
   },
   {
-    id: 2,
-    title: "Curaçao National Team Campaign",
-    category: "Content Creation",
-    description: "Developed a comprehensive script and 7-slide social media carousel documenting the team's FIFA journey and their June 14th match against Germany in Houston.",
-    tags: ["Scriptwriting", "Social Media", "Sports Content"],
-    link: "#",
-  },
+  id: 2,
+  title: "Synchronicity S2 Promotional Campaign",
+  category: "Creative Portfolio",
+  browserMockup: false,
+  image: synchronicityImg,
+  description:
+    "Conceptualized and edited a series of promotional reels and motion graphics for ACM-JU's flagship technical event, Synchronicity S2. Optimized content for Instagram to maximize engagement, contributing to 50K+ campaign views and increased event participation.",
+  tags: [
+    "CapCut",
+    "Instagram Reels",
+    "Motion Graphics",
+    "Creative Direction",
+    "Digital Marketing"
+  ],
+  link: "https://www.instagram.com/acm.ju/",
+},
   {
     id: 3,
     title: "Winter Photography Collection",
     category: "Photography",
     description: "A curated collection of winter photography submitted for contest exhibition, utilizing technical skills developed through foundational training.",
     tags: ["Visual Arts", "Editing", "Composition"],
+    BrowserMockup : false,
     link: "#",
   },
 ];
@@ -77,8 +94,22 @@ const Projects = () => {
               </p>
             </div>
 
+{project.BrowserMockup ? (
+  <BrowserMockup
+    image={project.image}
+    title={project.title}
+    liveUrl={project.liveUrl}
+  />
+) : (
+  <ImageCard
+    image={project.image}
+    title={project.title}
+    liveUrl={project.liveUrl}
+  />
+)}
+
             <div>
-              <div className="flex flex-wrap gap-2 mb-8">
+              <div className="mt-6 flex flex-wrap gap-2 mb-8">
                 {project.tags.map((tag, index) => (
                   <span
                     key={index}
