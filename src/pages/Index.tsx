@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
 import SkillsSection from "@/components/SkillsSection";
-import WorkSection from "@/components/WorkSection";
+import JourneySection from "@/components/JourneySection";
 import ContactSection from "@/components/ContactSection";
 import sanjibPhoto from "@/assets/sanjib-photo.png";
 import React from "react";
@@ -26,7 +26,7 @@ const Index = () => {
         <Hero />
         <AboutSection />
         <SkillsSection />
-        <WorkSection />
+        <JourneySection />
         <Projects />
         <ContactSection />
       </div>

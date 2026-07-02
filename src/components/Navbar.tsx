@@ -22,7 +22,7 @@ const Navbar = () => {
     setIsMobileMenuOpen(false); 
   };
 
-  const navLinks = ["about", "skills", "work", "projects", "contact"];
+  const navLinks = ["about", "skills", "journey", "projects", "contact"];
 
   return (
     <motion.nav
