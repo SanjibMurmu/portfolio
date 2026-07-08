@@ -21,7 +21,7 @@ const ContactSection = () => {
           </p>
           <a
 
-            className="inline-block px-10 py-4 rounded-full bg-primary text-primary-foreground font-display font-semibold hover:scale-105 transition-transform" href="mailto:sanjibmurmu2005@gmail.com">
+            className="inline-block px-10 py-4 rounded-full bg-primary text-primary-foreground font-display font-semibold hover:scale-105 transition-transform" href="mailto:contact@sanjibmurmu.in">
             
             Say Hello →
           </a>

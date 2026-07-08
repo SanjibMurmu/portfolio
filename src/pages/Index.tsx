@@ -10,8 +10,12 @@ import Projects from "@/components/Projects";
 
 const Index = () => {
   return (
-    <div className="bg-background text-foreground min-h-screen overflow-x-hidden relative">
-      {/* Background photo spanning hero + about */}
+    // 1. Notice we changed 'overflow-x-hidden' to 'overflow-x-clip' here
+    <div className="bg-background text-foreground min-h-screen overflow-x-clip relative">
+      
+      {/* 2. Navbar is placed at the very top inside the main div */}
+      <Navbar />
+
       <div className="absolute top-0 left-0 right-0 h-[200vh] z-0 pointer-events-none">
         <img
           src={sanjibPhoto}
@@ -22,7 +26,6 @@ const Index = () => {
       </div>
 
       <div className="relative z-10">
-        <Navbar />
         <Hero />
         <AboutSection />
         <SkillsSection />

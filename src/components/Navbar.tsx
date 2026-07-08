@@ -20,7 +20,13 @@ const Navbar = () => {
     });
     // Close the mobile menu automatically after clicking a link
     setIsMobileMenuOpen(false); 
-  };
+    setTimeout(() => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }, 150);
+};
+
 
   const navLinks = ["about", "skills", "journey", "projects", "contact"];
 
@@ -29,7 +35,7 @@ const Navbar = () => {
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`sticky top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled || isMobileMenuOpen
           ? "bg-neutral-950/80 backdrop-blur-2xl border-b border-white/5"
           : "bg-transparent"
