@@ -55,6 +55,7 @@ const App = () => {
                 opacity: 1,
                 y: 0,
                 filter: "blur(0px)",
+                transitionEnd: { filter: "none" },
               }}
               transition={{
                 duration: 0.7,
