@@ -43,13 +43,13 @@ const Hero = () => {
           className="mt-12 flex justify-center gap-4"
         >
           <button
-            onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => document.getElementById("projects")?.scrollIntoView()}
             className="px-8 py-3 rounded-full bg-primary text-primary-foreground font-display font-semibold text-sm hover:scale-105 transition-transform"
           >
             View Projects
           </button>
           <button
-            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => document.getElementById("contact")?.scrollIntoView()}
             className="px-8 py-3 rounded-full glass font-display font-semibold text-sm text-foreground hover:scale-105 transition-transform"
           >
             Get in Touch

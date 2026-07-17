@@ -18,9 +18,7 @@ const Navbar = () => {
     // Close the mobile menu automatically after clicking a link
     setIsMobileMenuOpen(false);
     setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({
-        behavior: "smooth",
-      });
+      document.getElementById(id)?.scrollIntoView();
     }, 150);
   };
 
@@ -49,7 +47,7 @@ const Navbar = () => {
             src="/sanju.svg"
             alt="Portfolio Logo"
             className="h-10 w-auto object-contain cursor-pointer"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={() => window.scrollTo({ top: 0})}
           />
 
           {/* Desktop Links (Hidden on Mobile) */}
