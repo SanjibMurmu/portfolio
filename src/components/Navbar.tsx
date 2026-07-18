@@ -18,7 +18,7 @@ const Navbar = () => {
     // Close the mobile menu automatically after clicking a link
     setIsMobileMenuOpen(false);
     setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView();
+      document.getElementById(id)?.scrollIntoView({behavior:"smooth"});
     }, 150);
   };
 
