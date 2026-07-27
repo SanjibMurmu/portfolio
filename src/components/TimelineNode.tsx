@@ -82,18 +82,12 @@ export default function TimelineNode({
         shadow-lg
         "
       >
-        <motion.img
-          src={logo}
-          alt=""
-          whileHover={{
-            scale: 1.1,
-          }}
-          transition={{
-            duration: 0.25,
-          }}
-          // Increased from h-9 w-9 to h-12 w-12
-          className="h-12 w-12 object-contain"
-        />
+      <img
+    src={logo}
+    loading="lazy"
+    decoding="async"
+    className="h-12 w-12 object-contain"
+/>
       </motion.div>
 
     </div>

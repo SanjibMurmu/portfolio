@@ -39,7 +39,7 @@ export default function JourneySection() {
           -translate-x-1/2
           rounded-full
           bg-primary/5
-          blur-[180px]
+          blur-[80px]
           "
         />
 

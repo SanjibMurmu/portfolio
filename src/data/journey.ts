@@ -1,5 +1,5 @@
 import acmLogo from "@/assets/logos/ju-acm.svg";
-import jusswcaLogo from "@/assets/logos/jusswca.png";
+import jusswcaLogo from "@/assets/logos/jusswca.webp";
 
 export const journey = [
   {

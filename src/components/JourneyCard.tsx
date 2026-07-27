@@ -31,7 +31,7 @@ export default function JourneyCard({ exp }: JourneyCardProps) {
       border
       border-zinc-800
       bg-zinc-900/50
-      backdrop-blur-xl
+      bg-zinc-900/70
       p-6
       sm:p-8
       transition-all
