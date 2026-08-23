@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import marksSS from "@/assets/marks.png";
 import shortener from "@/assets/shortener.png";
 import synchronicityImg from "@/assets/acm.png";
+import mare from "@/assets/mare.png";
 import ProjectCard, { Project } from "./ProjectCard";
 
 const projectsData: Project[] = [
@@ -22,6 +23,34 @@ const projectsData: Project[] = [
   },
   {
     id: 2,
+    title: "Mare Serenj",
+    category: "Full Stack",
+    description:
+      "A cassette-themed web radio player that streams curated YouTube playlists, featuring dynamic time-of-day background theming, full playback controls with shuffle and loop, and an animated tape-deck UI with spinning reels. Name means 'Old Songs' in Santali.",
+    tags: ["JavaScript", "YouTube IFrame API", "HTML/CSS"],
+    media: "mockup",
+    image: mare,
+    liveUrl: "https://mare-serenj.sanjibmurmu.in/",
+    link: "https://github.com/SanjibMurmu/mare-serenj",
+    linkLabel: "View Repo",
+    isLive: true,
+  },
+  
+  {
+    id: 3,
+    title: "URL Shortener",
+    category: "Full Stack",
+    description:
+      "A simple and efficient URL shortening service built with a modern tech stack, featuring a clean UI, real-time analytics, and seamless integration with popular social media platforms.",
+    tags: ["Java", "Spring Boot", "H2 Database", "HTML"],
+    media: "mockup",
+    image: shortener,
+    link: "https://github.com/SanjibMurmu/URLShortener",
+    linkLabel: "View Repo",
+    isLive: false,
+  },
+  {
+    id: 4,
     title: "Synchronicity S2 Promotional Campaign",
     category: "Creative Portfolio",
     media: "image",
@@ -38,20 +67,7 @@ const projectsData: Project[] = [
     link: "https://www.instagram.com/acm.ju/",
     linkLabel: "View Campaign",
     isLive: false,
-  },
-  {
-    id: 3,
-    title: "URL Shortener",
-    category: "Full Stack",
-    description:
-      "A simple and efficient URL shortening service built with a modern tech stack, featuring a clean UI, real-time analytics, and seamless integration with popular social media platforms.",
-    tags: ["Java", "Spring Boot", "H2 Database", "HTML"],
-    media: "mockup",
-    image: shortener,
-    link: "https://github.com/SanjibMurmu/URLShortener",
-    linkLabel: "View Repo",
-    isLive: false,
-  },
+  }
 ];
 
 // Coverflow tuning — mirrors the Originkit "Smooth 3D Slideshow" defaults.
