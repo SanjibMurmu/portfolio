@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import marksSS from "@/assets/marks.png";
 import shortener from "@/assets/shortener.png";
 import synchronicityImg from "@/assets/acm.png";
+import captionTranslator from "@/assets/captionTranslator.png";
 import mare from "@/assets/mare.png";
 import ProjectCard, { Project } from "./ProjectCard";
 
@@ -51,6 +52,19 @@ const projectsData: Project[] = [
   },
   {
     id: 4,
+    title: "Live Caption Translator",
+    category: "Browser Extension",
+    description:
+      "A Chromium browser extension that translates video subtitles into your preferred language in real time using Azure AI Translator, supporting both native HTML5 caption tracks and dynamic DOM-based overlays like YouTube's.",
+    tags: ["JavaScript", "Chrome Extension", "Manifest V3", "Azure AI Translator"],
+    media: "mockup",
+    image: captionTranslator,
+    link: "https://github.com/SanjibMurmu/caption-translator",
+    linkLabel: "View Repo",
+    isLive: false,
+  },
+  {
+    id: 5,
     title: "Synchronicity S2 Promotional Campaign",
     category: "Creative Portfolio",
     media: "image",
